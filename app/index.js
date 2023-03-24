@@ -9,6 +9,7 @@ import {
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 
 const Home = () => {
   const router = useRouter();
@@ -17,9 +18,26 @@ const Home = () => {
     <SafeAreaView style={{ flext: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
         options={{
-          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerStyle: { backgroundColor: "#f23d45" },
+          headerShadowVisible: true,
+          headerTitle: "hello world",
+          headerLeft: () => <ScreenHeaderBtn iconUrl={icons.menu} />,
+          headerRight: () => <ScreenHeaderBtn iconUrl={images.profile} />,
         }}
       />
+
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View
+          style={{
+            flex: 1,
+            padding: SIZES.medium,
+          }}
+        >
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

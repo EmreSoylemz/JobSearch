@@ -11,11 +11,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  btnImg: (dimension) => ({
-    width: dimension,
-    height: dimension,
+  btnImg: {
+    width: "%60",
+    height: "%60",
     borderRadius: SIZES.small / 1.25,
-  }),
+  },
 });
 
 export default styles;
